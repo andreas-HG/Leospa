@@ -1,0 +1,96 @@
+@mixin minQ($arg) {
+  @media only screen and (min-width: $arg) {
+    @content;
+  }
+}
+
+@mixin maxQ($arg) {
+  @media only screen and (max-width: $arg) {
+    @content;
+  }
+}
+
+@mixin lightLink {
+  text-decoration: none;
+  color: $light;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  &:hover {
+    color: darken($light, 20%);
+    transition: color 0.5s, background-color 0.5s;
+  }
+}
+
+@mixin darkLink {
+  text-decoration: none;
+  color: $dark;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  &:hover {
+    color: $pink;
+    transition: color 0.5s, background-color 0.5s;
+  }
+}
+
+@mixin darkBtn {
+  padding: 1rem;
+  border: none;
+  background-color: $dark;
+  color: $light;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: color 0.5s, background-color 0.5s;
+  &:hover {
+    color: $light;
+    background-color: lighten($dark, 20%);
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@mixin lightBtn {
+  cursor: pointer;
+  &:hover {
+    color: $light;
+    background-color: $dark;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@mixin pinkBtn {
+  padding: 1rem;
+  border: none;
+  background-color: $pink;
+  color: $white;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: color 0.5s, background-color 0.5s;
+  &:hover {
+    color: $dark;
+    // background-color: lighten($pink, 10%);
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 0 15px transparentize($dark, 0.9);
+}
+
+@mixin ratio($ratio) {
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: $ratio;
+  }
+}
+
+@mixin position($posX: 50%, $posY: 50%, $transX: -50%, $transY: -50%) {
+  position: absolute;
+  top: $posY;
+  left: $posX;
+  transform: translate($transX, $transY);
+}

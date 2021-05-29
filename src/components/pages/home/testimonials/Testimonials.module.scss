@@ -1,0 +1,46 @@
+@import '/src/assets/scss/import';
+
+.slide {
+    background-color: $lightPink;
+
+    .slideContent {
+        padding: 5rem;
+        max-width: $lg;
+        margin: auto;
+        text-align: center;
+        .quote {
+            margin: auto;
+        }
+        
+        .content {
+            margin: 3rem auto;
+    
+        }
+    
+        .img {
+            margin: auto;
+            border-radius: 100%;
+            margin-bottom: 2rem;
+        }
+    
+        .name {
+            font-family: $serif;
+            font-size: 120%;
+            span {
+                font-family: $sans;
+                font-size: 80%;
+                color: lighten($dark, 20%);
+            }
+        }
+    }
+}
+
+.dots {
+    bottom: 25px !important;
+    button {
+        &:before {
+            color: $pink !important;
+            font-size: 10px !important;
+        }
+    }
+}

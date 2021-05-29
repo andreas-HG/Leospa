@@ -1,0 +1,120 @@
+@import '/src/assets/scss/import';
+
+.hero {
+    width: 100vw;
+    .heroGrid {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        display: grid;
+        padding-top: 7rem;
+        @include minQ($sm) {
+            grid-template-columns: 1fr 4fr;
+        }
+        @include minQ($md) {
+            grid-template-columns: 1fr 3fr;
+        }
+        @include minQ($xl) {
+            padding-top: unset;
+            grid-template-columns: 1fr 3fr 4fr;
+        }
+        gap: 3rem;
+        .left {
+            display: none;
+            @include minQ($sm) {
+                display: block;
+            }
+            position: relative;
+            img {
+                width: auto;
+                height: 70%;
+                @include minQ($xl) {
+                    @include position(0, 50%, 0, -50%);
+                }
+            }
+        }
+    
+        .center {
+            position: relative;
+            padding: 2rem;
+            @include minQ($sm) {
+                padding: 0;
+            }
+            .centerContent {
+                .pink {
+                    color: $pink;
+                    font-family: $serif;
+                }
+                h1 {
+                    font-weight: 700;
+                }
+                p {
+                    color: lighten($dark, 30%);
+                    margin: 2rem auto 3rem auto;
+                }
+                a {
+                    @include pinkBtn;
+                    border-radius: unset;
+                    width: 100%;
+                }
+                button {
+                    @include darkLink;
+                    background-color: transparent;
+                    border: none;
+                    margin: 1rem;
+                    padding: 0;
+                    padding-left: 1rem;
+                    white-space: nowrap;
+                    svg {
+                        font-size: 200%;
+                        color: $pink;
+                    }
+                }
+                a, button {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    padding: 1rem;
+                    margin: 0;
+                    @include minQ($md) {
+                        max-width: 50%;
+                        display: inline-block;;
+                    }
+                }
+                width: 80%;
+                @include minQ($xl) {
+                @include position;
+                }
+                // padding: 3rem;
+            }
+    
+        }
+    
+        .right {
+            display: none;
+            @include minQ($xl) {
+                display: block;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .video {
+        @include position;
+        z-index: 100;
+        button {
+            @include pinkBtn;
+            line-height: 1em;
+            position: absolute;
+            top: -1rem;
+            right: -1rem;
+        }
+        iframe {
+            width: 90vw;
+            height: 90vh;
+        }
+    }
+    
+}

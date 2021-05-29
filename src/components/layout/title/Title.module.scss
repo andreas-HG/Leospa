@@ -1,0 +1,19 @@
+@import '/src/assets/scss/import';
+
+.title {
+    text-align: center;
+    max-width: $md;
+    margin: 5rem auto;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 1em;
+        font-weight: 700;
+    }
+    p {
+        color: lighten($dark, 30%);
+    }
+
+}
+
+.wide {
+    max-width: $lg;
+}

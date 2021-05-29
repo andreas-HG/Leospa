@@ -1,0 +1,31 @@
+@import '/src/assets/scss/import';
+
+.controls {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    ul {
+        background-color: transparentize($pink, 0.5);
+        padding: 0.5rem;
+        list-style-type: none;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        li {
+            padding: 0.5rem;
+            text-align: center;
+            a {
+                line-height: 1em;
+                font-size: 150%;
+                @include lightLink;
+                // border-radius: 100%;
+            }
+        }
+        .adminCategory {
+            @include darkLink;
+            font-size: 95%;
+        }
+    }
+}

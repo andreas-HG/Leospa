@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rufina:400,700&display=swap");
+
+
+
+
+//Bredde for indhold:
+
+// $content-width: 1080px;
+
+//Skrifttyper:
+
+$sans: 'Roboto', sans-serif;
+$serif: 'Rufina', serif;
+
+
+
+//Farver:
+
+$black: #1e2528;
+$white: #fff;
+
+$light: $white;
+$dark: #30383b;
+$pink: #ff817e;
+$lightPink: #fff9f8;
+
+
+
+
+//Media queries:
+
+$xx: 300px;
+$xs: 450px;
+$sm: 600px;
+$md: 750px;
+$lg: 900px;
+$xl: 1200px;

@@ -1,0 +1,91 @@
+@import '/src/assets/scss/import';
+
+.booking {
+    margin-top: 5rem;
+    
+    // min-height: 70vh;
+    @include minQ($lg) {
+        display: grid;
+    grid-template-columns: 2fr 3fr;
+    }
+
+    main {
+        background-color: $lightPink;
+        order: 2;
+        position: relative;
+        padding: 12rem 5rem;
+        form {
+            width: 100%;
+            max-width: $md;
+            @include minQ($xl) {
+                display: grid;
+                gap: 0.5rem;
+                row-gap: 1.5rem;
+                grid-template-columns: unset;
+                grid-template-areas: 
+                'name email'
+                'treatment phone'
+                'date time'
+                'notes notes';
+            }
+
+            fieldset {
+                width: 100%;
+                
+                
+            }
+            label {
+                font-size: 0;
+            }
+
+            input, textarea, select {
+                width: 100%;
+                // padding: 0.5rem;
+                min-height: 2rem;
+                border: none;
+                border-bottom: 2px solid lighten($dark, 50%);
+                background-color: $lightPink;
+                appearance: none;
+                @include maxQ($xl) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            button {
+                width: 80%;
+                @include pinkBtn;
+            }
+            .name {
+                grid-area: name;
+            }
+            .email {
+                grid-area: email;
+            }
+            .phone {
+                grid-area: phone
+            }
+            .treatment {
+                grid-area: treatment;
+            }
+            .date {
+                grid-area: date;
+            }
+            .time {
+                grid-area: time;
+            }
+            .notes {
+                grid-area: notes;
+            }
+        }
+    }
+
+    aside {
+        order: 1;
+        background-size: cover;
+        background-position: center;
+        display: none;
+        @include minQ($lg) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import '/src/assets/scss/import';
+
+.nav {
+    float: right;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 3rem;
+        // padding: 1rem;
+        position: relative;
+        bottom: -3rem;
+        li {
+            display: inline-block;
+            padding: 0 1.4rem;
+            // padding-bottom: 0;
+            font-weight: 700;
+        }
+    }
+}

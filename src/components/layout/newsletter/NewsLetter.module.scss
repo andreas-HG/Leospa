@@ -1,0 +1,56 @@
+@import '/src/assets/scss/import';
+
+
+    .newsletterBtn {
+        position: fixed;
+        right: 0;
+        bottom: 20%;
+        z-index: 1000;
+        padding: 1rem;
+        @include pinkBtn;
+        background-color: transparentize($pink, 0.4);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        // color: $light;
+        svg {
+            font-size: 150%;
+            // margin-right: 1rem;
+        }
+    }
+
+    .signup {
+        @include position;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+        background-color: $light;
+        max-width: $sm;
+        z-index: 1000;
+        padding: 2rem;
+        @include shadow;
+        border: 5px solid $lightPink;
+        h2 {
+            margin: 2rem;
+        }
+        label {
+            font-size: 0;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        button {
+            @include pinkBtn;
+            width: 50%;
+        }
+        .cancel {
+            background-color: $light;
+            color: $pink;
+        }
+    }
+
+    .showSignup {
+        visibility: unset;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }

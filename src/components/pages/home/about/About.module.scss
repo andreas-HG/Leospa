@@ -1,0 +1,55 @@
+@import '/src/assets/scss/import';
+
+.about {
+    position: relative;
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: -2rem;
+    }
+    margin: 5rem auto;
+    margin-top: 0;
+    // max-width: $lg;
+    .preTitle {
+        text-align: center;
+        color: lighten($dark, 20%);
+        font-size: 120%;
+    }
+    a {
+        display: block;
+        width: 10rem;
+        text-align: center;
+        margin: auto;
+        @include pinkBtn;
+    }
+    .chinaRose {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        left: 2rem;
+        display: none;
+        @include minQ($sm) {
+            display: block;
+        }
+        @include minQ($md) {
+            left: 5rem;
+        }
+    }
+    .jasmine {
+        position: absolute;
+        z-index: -1;
+        right: 2rem;
+        top: 80%;
+        display: none;
+        @include minQ($sm) {
+            display: block;
+        }
+        @include minQ($md) {
+            right: 5rem;
+            top: 70%;
+        }
+        @include minQ($lg) {
+            top: 60%;
+        }
+    }
+}

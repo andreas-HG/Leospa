@@ -1,0 +1,78 @@
+@import '/src/assets/scss/import';
+
+.footer {
+    position: relative;
+    margin-top: 3rem;
+    padding: 5rem 1rem;
+    width: 100%;
+    background-color: $lightPink;
+    img {
+        width: 7rem;
+        display: block;
+        margin: auto;
+    }
+    nav {
+        display: block;
+        float: none;
+        ul {
+            width: 572px;
+            margin: auto;
+            max-width: 100%;
+            bottom: initial;
+            display: block;
+            padding: 3rem 0;
+            li {
+                text-align: center;
+                padding: 0.5rem 1.5rem;
+                display: block;
+                @include minQ($sm) {
+                    display: inline-block;
+                }
+                a {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .contactInfo {
+        text-align: center;
+        margin-bottom: 3rem;
+        p {
+            margin: 0.5rem auto;
+            font-size: 90%;
+            color: lighten($dark, 20%);
+        }
+    }
+    .soMe {
+        color: $dark;
+        text-align: center;
+        font-size: 120%;
+        svg {
+            margin: 0.5rem;
+        }
+    }
+    .copyright {
+        text-align: center;
+        padding-top: 3rem;
+        color: lighten($dark, 30%);
+        a {
+            color: $pink;
+            &:hover {
+                color: $dark;
+            }
+        }
+    }
+    .adminLink {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 2rem 3rem;
+        border-top-left-radius: 30px;
+        @include darkLink;
+        color: $lightPink;
+        &:hover {
+            // color: $dark;
+            background-color: $dark;
+        }
+    }
+}
